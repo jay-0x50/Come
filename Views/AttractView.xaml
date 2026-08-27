@@ -1,0 +1,90 @@
+<UserControl x:Class="Come.Views.AttractView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid ClipToBounds="True">
+        <Grid.Background><StaticResource ResourceKey="HeroGradient" /></Grid.Background>
+
+        <Ellipse Width="760" Height="760" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-330,-190,0" Fill="#145D7CFF" />
+        <Ellipse Width="520" Height="520" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-240,0,0,-280" Fill="#1648E0C2" />
+        <Rectangle Width="1" Height="1200" Fill="#18FFFFFF" HorizontalAlignment="Right" Margin="0,0,490,0" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform><RotateTransform Angle="18" /></Rectangle.RenderTransform>
+        </Rectangle>
+
+        <Grid Margin="96,60">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="1.05*" /><ColumnDefinition Width="0.95*" /></Grid.ColumnDefinitions>
+            <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="*" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+
+            <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Border Width="48" Height="48" CornerRadius="14" Background="{StaticResource MintBrush}">
+                    <TextBlock Text="C" Foreground="#071A20" FontWeight="Black" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+                <StackPanel Margin="14,2,0,0">
+                    <TextBlock Text="C O M E" FontSize="21" FontWeight="Bold" />
+                    <TextBlock Text="CUSTOM PC STUDIO" Style="{StaticResource EyebrowText}" Foreground="{StaticResource MutedBrush}" Margin="1,2,0,0" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" MaxWidth="730" HorizontalAlignment="Left">
+                <Border Background="#1848E0C2" BorderBrush="#5548E0C2" BorderThickness="1" CornerRadius="18" Padding="14,8" HorizontalAlignment="Left" Margin="0,0,0,24">
+                    <TextBlock Text="BUILD  ·  VIEW  ·  DELIVER" Style="{StaticResource EyebrowText}" />
+                </Border>
+                <TextBlock FontSize="66" FontWeight="Bold" LineHeight="78" TextWrapping="Wrap">
+                    <Run Text="상상하던 PC를" /><LineBreak />
+                    <Run Text="직접 " /><Run Text="조립" Foreground="{StaticResource MintBrush}" /><Run Text="해보세요" />
+                </TextBlock>
+                <TextBlock Text="부품 선택부터 실시간 호환성 검사, 3D 완성품 확인과 배송까지.&#x0a;어려운 조립은 COME이 쉽게 안내해 드립니다." Foreground="#B7C8D8" FontSize="19" LineHeight="32" Margin="0,25,0,38" />
+                <StackPanel Orientation="Horizontal">
+                    <Border Background="#0DFFFFFF" BorderBrush="#22FFFFFF" BorderThickness="1" CornerRadius="16" Padding="18,12" Margin="0,0,12,0">
+                        <StackPanel Orientation="Horizontal"><TextBlock Text="✓" Foreground="{StaticResource MintBrush}" FontWeight="Bold" Margin="0,0,9,0" /><TextBlock Text="실시간 호환성 확인" /></StackPanel>
+                    </Border>
+                    <Border Background="#0DFFFFFF" BorderBrush="#22FFFFFF" BorderThickness="1" CornerRadius="16" Padding="18,12">
+                        <StackPanel Orientation="Horizontal"><TextBlock Text="◈" Foreground="{StaticResource PrimaryBrush}" FontWeight="Bold" Margin="0,0,9,0" /><TextBlock Text="인터랙티브 3D 미리보기" /></StackPanel>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+
+            <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="530" Height="600">
+                <Ellipse Width="470" Height="150" Fill="#34000000" VerticalAlignment="Bottom" Margin="0,0,0,15"><Ellipse.Effect><BlurEffect Radius="32" /></Ellipse.Effect></Ellipse>
+                <Border Width="405" Height="520" CornerRadius="30" BorderBrush="#5D7695" BorderThickness="3" Background="#A40B1623" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid Margin="28">
+                        <Grid.RowDefinitions><RowDefinition Height="48" /><RowDefinition Height="*" /><RowDefinition Height="32" /></Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"><Ellipse Width="8" Height="8" Fill="{StaticResource MintBrush}" Margin="5" /><Ellipse Width="8" Height="8" Fill="#344A62" Margin="5" /></StackPanel>
+                        <Grid Grid.Row="1">
+                            <Border Width="250" Height="310" Background="#222E4661" BorderBrush="#496784" BorderThickness="2" CornerRadius="12" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Grid>
+                                    <Rectangle Width="110" Height="110" RadiusX="14" RadiusY="14" Stroke="{StaticResource PrimaryBrush}" StrokeThickness="4" Fill="#195D7CFF" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" />
+                                    <Ellipse Width="78" Height="78" Stroke="{StaticResource MintBrush}" StrokeThickness="3" HorizontalAlignment="Center" Margin="0,56,0,0" VerticalAlignment="Top" />
+                                    <Rectangle Height="46" Width="198" RadiusX="8" Fill="#D84E79FF" VerticalAlignment="Bottom" Margin="0,0,0,56" />
+                                    <Rectangle Height="12" Width="160" RadiusX="6" Fill="#8548E0C2" VerticalAlignment="Bottom" Margin="0,0,0,73" />
+                                </Grid>
+                            </Border>
+                            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,2,0">
+                                <Ellipse Width="98" Height="98" Stroke="#47617D" StrokeThickness="12" Margin="0,7"><Ellipse.Fill><RadialGradientBrush><GradientStop Color="#1D3450" Offset="0" /><GradientStop Color="#0A1421" Offset="1" /></RadialGradientBrush></Ellipse.Fill></Ellipse>
+                                <Ellipse Width="98" Height="98" Stroke="#47617D" StrokeThickness="12" Margin="0,7" />
+                                <Ellipse Width="98" Height="98" Stroke="#47617D" StrokeThickness="12" Margin="0,7" />
+                            </StackPanel>
+                        </Grid>
+                        <TextBlock Grid.Row="2" Text="COME  /  CRAFTED FOR YOU" Style="{StaticResource EyebrowText}" Foreground="#55728F" VerticalAlignment="Bottom" />
+                    </Grid>
+                </Border>
+                <Border Width="405" Height="520" CornerRadius="30" BorderBrush="#2548E0C2" BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Border.Effect><DropShadowEffect Color="#48E0C2" BlurRadius="35" ShadowDepth="0" Opacity="0.28" /></Border.Effect>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="0,25,0,0">
+                <StackPanel HorizontalAlignment="Center">
+                    <Border x:Name="Pulse" Width="330" Height="68" CornerRadius="34" Background="#18FFFFFF" BorderBrush="#55FFFFFF" BorderThickness="1">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Ellipse Width="10" Height="10" Fill="{StaticResource MintBrush}" Margin="0,0,14,0" />
+                            <TextBlock Text="화면을 터치해 시작하세요" FontSize="18" FontWeight="SemiBold" />
+                        </StackPanel>
+                    </Border>
+                    <TextBlock Text="60초 동안 입력이 없으면 시작 화면으로 돌아갑니다" Style="{StaticResource MutedText}" FontSize="12" HorizontalAlignment="Center" Margin="0,13,0,0" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Button Command="{Binding StartCommand}" Background="Transparent" BorderThickness="0" Padding="0" Cursor="Hand" />
+    </Grid>
+</UserControl>

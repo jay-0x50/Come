@@ -1,0 +1,55 @@
+<UserControl x:Class="Come.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="{StaticResource InkBrush}">
+        <Ellipse Width="820" Height="820" Fill="#0D5D7CFF" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-480,-300,0" />
+        <Grid Margin="76,48">
+            <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="*" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackPanel Orientation="Horizontal">
+                    <Border Width="46" Height="46" CornerRadius="14" Background="{StaticResource MintBrush}"><TextBlock Text="C" Foreground="#071A20" FontWeight="Black" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+                    <TextBlock Text="C O M E" FontSize="21" FontWeight="Bold" VerticalAlignment="Center" Margin="14,0,0,0" />
+                </StackPanel>
+                <Button Content="처음으로" Command="{Binding NewOrderCommand}" Style="{StaticResource GhostButton}" HorizontalAlignment="Right" Padding="20,10" MinHeight="46" />
+            </Grid>
+
+            <StackPanel Grid.Row="1" Margin="0,70,0,38">
+                <TextBlock Text="HOW WOULD YOU LIKE TO BUILD?" Style="{StaticResource EyebrowText}" />
+                <TextBlock Text="어떤 방식으로 시작할까요?" FontSize="43" FontWeight="Bold" Margin="0,12,0,10" />
+                <TextBlock Text="직접 하나씩 고르거나, 목적에 맞는 추천 구성을 빠르게 만나보세요." Foreground="{StaticResource MutedBrush}" FontSize="17" />
+            </StackPanel>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions><ColumnDefinition Width="1.1*" /><ColumnDefinition Width="18" /><ColumnDefinition Width="0.9*" /></Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Command="{Binding StartCustomCommand}" Padding="0" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                    <Border CornerRadius="26" Background="{StaticResource PrimaryGradient}" Padding="38" BorderBrush="#557E9BFF" BorderThickness="1">
+                        <Grid>
+                            <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="*" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+                            <Border Width="74" Height="74" CornerRadius="22" Background="#26FFFFFF" HorizontalAlignment="Left"><TextBlock Text="＋" FontSize="38" FontWeight="Light" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+                            <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                                <TextBlock Text="직접 조립하기" FontSize="37" FontWeight="Bold" />
+                                <TextBlock Text="8가지 핵심 부품을 직접 비교하며&#x0a;나만의 PC를 완성합니다." FontSize="17" LineHeight="29" Foreground="#E0E7FF" Margin="0,15,0,0" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal"><TextBlock Text="부품 선택 시작" FontSize="17" FontWeight="SemiBold" /><TextBlock Text="  →" FontSize="22" /></StackPanel>
+                        </Grid>
+                    </Border>
+                </Button>
+
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions><RowDefinition /><RowDefinition Height="14" /><RowDefinition /><RowDefinition Height="14" /><RowDefinition /></Grid.RowDefinitions>
+                    <Button Grid.Row="0" Command="{Binding ApplyPresetCommand}" CommandParameter="gaming" Padding="0" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                        <Border Style="{StaticResource CardBorder}" Padding="26"><Grid><Border Width="58" Height="58" CornerRadius="18" Background="#2073E16C" HorizontalAlignment="Left"><TextBlock Text="G" Foreground="#73E16C" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border><StackPanel Margin="78,0,110,0" VerticalAlignment="Center"><TextBlock Text="QHD 게이밍" FontSize="20" FontWeight="Bold" /><TextBlock Text="7800X3D · RTX 4070 SUPER" Style="{StaticResource MutedText}" Margin="0,5,0,0" /></StackPanel><TextBlock Text="2,732,000원" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="SemiBold" /></Grid></Border>
+                    </Button>
+                    <Button Grid.Row="2" Command="{Binding ApplyPresetCommand}" CommandParameter="creator" Padding="0" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                        <Border Style="{StaticResource CardBorder}" Padding="26"><Grid><Border Width="58" Height="58" CornerRadius="18" Background="#205D7CFF" HorizontalAlignment="Left"><TextBlock Text="C" Foreground="#7891FF" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border><StackPanel Margin="78,0,110,0" VerticalAlignment="Center"><TextBlock Text="크리에이터" FontSize="20" FontWeight="Bold" /><TextBlock Text="Core i7 · 32GB · 2TB" Style="{StaticResource MutedText}" Margin="0,5,0,0" /></StackPanel><TextBlock Text="2,732,000원" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="SemiBold" /></Grid></Border>
+                    </Button>
+                    <Button Grid.Row="4" Command="{Binding ApplyPresetCommand}" CommandParameter="office" Padding="0" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                        <Border Style="{StaticResource CardBorder}" Padding="26"><Grid><Border Width="58" Height="58" CornerRadius="18" Background="#20FFBE62" HorizontalAlignment="Left"><TextBlock Text="O" Foreground="{StaticResource WarningBrush}" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border><StackPanel Margin="78,0,110,0" VerticalAlignment="Center"><TextBlock Text="스마트 오피스" FontSize="20" FontWeight="Bold" /><TextBlock Text="저전력 · 저소음 · 가성비" Style="{StaticResource MutedText}" Margin="0,5,0,0" /></StackPanel><TextBlock Text="1,452,000원" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="SemiBold" /></Grid></Border>
+                    </Button>
+                </Grid>
+            </Grid>
+
+            <TextBlock Grid.Row="3" Text="추천 구성도 모든 부품을 자유롭게 변경할 수 있습니다" Style="{StaticResource MutedText}" HorizontalAlignment="Center" Margin="0,28,0,0" />
+        </Grid>
+    </Grid>
+</UserControl>
